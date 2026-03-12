@@ -1,10 +1,15 @@
 import './App.css'
+import ArtistsPage from './pages/ArtistsPage'
 import TracksPage from './pages/TracksPage'
 
 function App() {
 
   return (
-    <TracksPage />
+    <main>
+      <TracksPage />
+      <hr />
+      <ArtistsPage />
+    </main>
   )
 }
 
