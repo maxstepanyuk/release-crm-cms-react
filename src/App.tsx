@@ -7,7 +7,6 @@ import NavBar from './components/NavBar'
 function App() {
 
   return (
-    <main>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<NavBar />} />
@@ -15,7 +14,6 @@ function App() {
           <Route path="/artists" element={<ArtistsPage />} />
         </Routes>
       </BrowserRouter>
-    </main>
   )
 }
 

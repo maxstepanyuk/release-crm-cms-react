@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
 import type { Track } from "../models/track"
+import NavBar from "../components/NavBar"
 
 async function getTracks(): Promise<Track[]> {
     const res = await fetch("http://localhost:3000/tracks")
@@ -25,10 +26,13 @@ function TracksPage() {
     ))
 
     return (
-        <div>
-            <h1>Tracks page</h1>
-            <ul>{tracks}</ul>
-        </div>
+        <>
+            <NavBar />
+            <main>
+                <h1>Tracks page</h1>
+                <ul>{tracks}</ul>
+            </main>
+        </>
     )
 }
 

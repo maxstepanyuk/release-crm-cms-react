@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import type { Artist } from "../models/artist"
 import { formatMailtoUrl, formatTelUrl, formatHttpUrl } from "../util/formatUrl"
+import NavBar from "../components/NavBar"
 
 async function getArtists(): Promise<Artist[]> {
     const res = await fetch("http://localhost:3000/artists")
@@ -40,10 +41,13 @@ function ArtistsPage() {
     ))
 
     return (
-        <div>
-            <h1>Artists page</h1>
-            <ul>{artists}</ul>
-        </div>
+        <>
+            <NavBar />
+            <main>
+                <h1>Artists page</h1>
+                <ul>{artists}</ul>
+            </main>
+        </>
     )
 }
 
